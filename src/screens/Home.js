@@ -1,7 +1,7 @@
 import React from 'react';
 import {View,Text,StyleSheet,Image} from 'react-native';
 
-const Home = () => {
+const Home = (props) => {
     const description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
   return (
     <View style={styles.mainContainer}>
@@ -15,7 +15,7 @@ const Home = () => {
         <Text style={[styles.mainHeader,{
           fontSize: 33,
           color:"#4c5dab"
-        }]}> Samiul Islam</Text>
+        }]}> {props.channelName}</Text>
         <Text style={styles.paraStyle}>{description}</Text>
       </View>
     </View>
