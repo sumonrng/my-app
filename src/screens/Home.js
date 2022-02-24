@@ -1,7 +1,10 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {View,Text,StyleSheet,Image} from 'react-native';
+import Menu from '../component/Menu';
 
 const Home = (props) => {
+  const navigation = useNavigation();
     const description = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
   return (
     <View style={styles.mainContainer}>
@@ -17,6 +20,9 @@ const Home = (props) => {
           color:"#4c5dab"
         }]}> {props.channelName}</Text>
         <Text style={styles.paraStyle}>{description}</Text>
+      </View>
+      <View>
+        <Menu/>
       </View>
     </View>
   );
