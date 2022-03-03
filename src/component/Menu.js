@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text,StyleSheet, TouchableOpacity} from 'react-native';
+import {View,Text,StyleSheet, TouchableOpacity,Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const Menu = () =>{
@@ -7,24 +7,44 @@ const Menu = () =>{
     return (
         <View style={styles.menuContainer}>
             <TouchableOpacity style={styles.buttonStyle}
-            onPress={()=> navigation.navigate('Course')}
-            >
-                <Text style={styles.textStyle}>Course</Text>
+                onPress={()=> navigation.navigate('Course')}
+                >
+                <Image 
+                    style={styles.iconStyle}
+                    source={{
+                        uri:"https://img.icons8.com/stickers/90/000000/training.png"
+                    }}
+                />
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonStyle}
-            onPress={()=> navigation.navigate('Contact')}
-            >
-                <Text style={styles.textStyle}>Contact</Text>
+                onPress={()=> navigation.navigate('Contact')}
+                >
+                <Image 
+                style={styles.iconStyle}
+                source={{
+                    uri:"https://img.icons8.com/stickers/90/000000/training.png"
+                }}
+                />
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonStyle}
             onPress={()=> navigation.navigate('About')}
             >
-                <Text style={styles.textStyle}>About</Text>
+            <Image 
+                style={styles.iconStyle}
+                source={{
+                    uri:"https://img.icons8.com/stickers/90/000000/about.png"
+                }}
+                />
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonStyle}
             onPress={()=> navigation.navigate('User')}
             >
-                <Text style={styles.textStyle}>User</Text>
+            <Image 
+                style={styles.iconStyle}
+                source={{
+                    uri:"https://img.icons8.com/stickers/90/000000/phone-office.png"
+                }}
+                />
             </TouchableOpacity>
             
         </View>
@@ -39,6 +59,11 @@ const styles = StyleSheet.create({
     textStyle:{
         textTransform:"uppercase",
         marginBottom:50
-    }
+    },
+    iconStyle:{
+        width:"100%",
+        height:50,
+        aspectRatio:1,
+    },
 });
 export default Menu;

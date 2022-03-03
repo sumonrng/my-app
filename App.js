@@ -13,17 +13,43 @@ export default function App() {
       return <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
 {/* <Stack.Screen name='Home' component={Home}/> */}
-            <Stack.Screen name='Home'>
+            <Stack.Screen name='Home' options={{headerShown:false}}>
             {(props)=> <Home {...props} channelName={"Samiul Islam"}/>}
             </Stack.Screen>
             {/* About Screen */}
-            <Stack.Screen name='About' component={About}/>
+            <Stack.Screen name='About' component={About} 
+            options={{
+              headerTitleStyle:{
+                fontSize:25,
+              },
+              headerTitleAlign:"center",
+            }}
+            />
             {/* Contact Screen */}
-            <Stack.Screen name='Contact' component={Contact}/>
+            <Stack.Screen name='Contact' component={Contact}
+            options={{
+              headerTitleStyle:{
+                fontSize:25,
+              },
+              headerTitleAlign:"center",
+            }}/>
             {/* About Screen */}
-            <Stack.Screen name='Course' component={Course}/>
+            <Stack.Screen name='Course' component={Course}
+            options={{
+              headerTitleStyle:{
+                fontSize:25,
+              },
+              headerTitle:"Courses",
+              headerTitleAlign:"center",
+            }}/>
             {/* About Screen */}
-            <Stack.Screen name='User' component={UserData}/>
+            <Stack.Screen name='User' component={UserData}
+            options={{
+              headerTitleStyle:{
+                fontSize:25,
+              },
+              headerTitleAlign:"center",
+            }}/>
         </Stack.Navigator>
       </NavigationContainer>  
 }

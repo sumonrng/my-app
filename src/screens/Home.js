@@ -21,8 +21,10 @@ const Home = (props) => {
         }]}> {props.channelName}</Text>
         <Text style={styles.paraStyle}>{description}</Text>
       </View>
-      <View>
+      <View style={styles.menuStyle}>
+        <View style={styles.lineStyle}></View>
         <Menu/>
+        <View style={[styles.lineStyle, {marginVertical:10}]}></View>
       </View>
     </View>
   );
@@ -65,6 +67,11 @@ const styles = StyleSheet.create({
     marginTop:30,
     paddingBottom:50,
     lineHeight:26,
+  },
+  lineStyle:{
+    marginBottom:10,
+    borderWidth:0.5,
+    borderColor:"grey",
   }
 });
 export default Home;
